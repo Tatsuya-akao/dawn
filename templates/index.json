@@ -1,5 +1,12 @@
 {
   "sections": {
+    "mainvisual": {
+      "type": "mainvisual",
+      "settings": {
+        "heading": "t:sections.mainvisual.heading",
+        "text": "t:sections.mainvisual.text"
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -200,6 +207,7 @@
     }
   },
   "order": [
+    "mainvisual",
     "image_banner",
     "rich_text",
     "featured_collection",

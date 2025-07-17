@@ -267,6 +267,10 @@
     }
   },
   "sections": {
+    "mainvisual": {
+      "heading": "Welcome to Takaki Brewery",
+      "text": "Enjoy the world of sake, where tradition meets innovation."
+    },
     "announcements": {
       "previous_announcement": "Previous announcement",
       "next_announcement": "Next announcement",
