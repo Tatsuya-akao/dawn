@@ -16,6 +16,24 @@
         "label": "t:settings_schema.logo.settings.logo_image.label"
       },
       {
+        "type": "image_picker",
+        "id": "logo_white",
+        "label": "t:settings_schema.logo.settings.logo_white.label",
+        "info": "t:settings_schema.logo.settings.logo_white.info"
+      },
+      {
+        "type": "image_picker",
+        "id": "logo_vertical",
+        "label": "t:settings_schema.logo.settings.logo_vertical.label",
+        "info": "t:settings_schema.logo.settings.logo_vertical.info"
+      },
+      {
+        "type": "image_picker",
+        "id": "logo_vertical_white",
+        "label": "t:settings_schema.logo.settings.logo_vertical_white.label",
+        "info": "t:settings_schema.logo.settings.logo_vertical_white.info"
+      },
+      {
         "type": "range",
         "id": "logo_width",
         "min": 50,

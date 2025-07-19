@@ -1,29 +1,81 @@
 {% schema %}
-{
-  "name": "Main Visual",
-  "settings": [
-    {
-      "type": "text",
-      "id": "heading",
-      "label": "見出し",
-      "default": "t:sections.mainvisual.heading"
-    },
-    {
-      "type": "textarea",
-      "id": "text",
-      "label": "テキスト",
-      "default": "t:sections.mainvisual.text"
-    }
-  ],
-  "presets": [
-    {
-      "name": "Main Visual"
-    }
-  ]
-}
+  {
+    "name": "Main Visual",
+    "settings": [],
+    "presets": [
+      {
+        "name": "Main Visual"
+      }
+    ]
+  }
 {% endschema %}
 
-<div class="mainvisual-section">
-  <h1>{{ 'sections.mainvisual.heading' | t }}</h1>
-  <p>{{ 'sections.mainvisual.text' | t }}</p>
+<div class="mainvisual">
+  <div class="mainvisual__container">
+    <div class="splide mainvisual__slides" aria-label="Main Visual">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
+            <img
+              class="mainvisual__image"
+              src="{{ 'mainvisual-slide-01.png' | asset_url }}"
+              width="1600"
+              height="900"
+              alt="スライド1">
+          </li>
+          <li class="splide__slide">
+            <img
+              class="mainvisual__image"
+              src="{{ 'mainvisual-slide-02.png' | asset_url }}"
+              width="1600"
+              height="900"
+              alt="スライド2">
+          </li>
+          <li class="splide__slide">
+            <img
+              class="mainvisual__image"
+              src="{{ 'mainvisual-slide-03.png' | asset_url }}"
+              width="1600"
+              height="900"
+              alt="スライド3">
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="mainvisual__content">
+      <div class="mainvisual__logo">
+        {% if settings.logo != blank %}
+          <img
+            class="mainvisual__logo-image"
+            src="{{ settings.logo_vertical_white | img_url: '700x' }}"
+            width="160"
+            height="160"
+            alt="{{ settings.logo.alt | default: shop.name }}">
+        {% else %}
+          <span class="mainvisual__logo-text">{{ shop.name }}</span>
+        {% endif %}
+      </div>
+
+      <p class="mainvisual__text">宗像の里山で育まれた清らかな水と厳選米で、<br>至高の一杯をお届けします。</p>
+    </div>
+  </div>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const splide = new Splide('.mainvisual__slides', {
+      type: 'fade',
+      autoplay: true,
+      interval: 7000,
+      pauseOnHover: false,
+      arrows: false,
+      pagination: false,
+      speed: 3000,
+      easing: 'ease-in-out',
+      rewind: true,
+      updateOnMove: true,
+    });
+
+    splide.mount();
+  });
+</script>

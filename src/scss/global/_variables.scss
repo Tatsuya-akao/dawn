@@ -1,0 +1,13 @@
+@use 'sass:math';
+
+@import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;700&display=swap');
+
+$font-default: 'Noto Sans JP', sans-serif;
+$font-serif: 'Zen Old Mincho', serif;
+$font-roboto: 'Roboto', sans-serif;
+$font-ari: Arial, sans-serif;
+
+// COLOR VARS
+$c-white: #fff;
+$c-darkest: #000;
+$c-black: #262626;

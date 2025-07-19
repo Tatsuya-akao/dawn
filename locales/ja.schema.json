@@ -312,6 +312,18 @@
         "logo_image": {
           "label": "ロゴ"
         },
+        "logo_white": {
+          "label": "ロゴ（白）",
+          "info": "暗い背景やオーバーレイで使用されます"
+        },
+        "logo_vertical": {
+          "label": "ロゴ（縦）",
+          "info": "モバイルや狭いレイアウトで使用されます"
+        },
+        "logo_vertical_white": {
+          "label": "ロゴ（縦、白）",
+          "info": "モバイルや狭いレイアウトで暗い背景やオーバーレイに使用されます"
+        },
         "logo_width": {
           "label": "幅"
         },
